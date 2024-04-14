@@ -1,0 +1,16 @@
+.app {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.923);
+    transition: background-color 0.3s ease;
+}
+
+.appDark {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.896);
+    transition: background-color 0.3s ease;
+}
+
+
+   
