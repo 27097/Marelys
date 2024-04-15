@@ -33,7 +33,7 @@ const auth = Router();
 
 /**
  * @swagger
- * /api/auth/register:
+ * /api/register:
  *   post:
  *     summary: Registro de usuario
  *     description: Crea un nuevo usuario en la DB.
@@ -69,7 +69,7 @@ auth.post("/register", validateSchema(registerSchema), [handler.register]);
 
 /**
  * @swagger
- * /api/auth/login:
+ * /api/login:
  *   post:
  *     summary: Inicio de sesión
  *     description: Inicia sesión con las credenciales proporcionadas en el registro de usuarios.
@@ -90,7 +90,7 @@ auth.post("/login", validateSchema(loginSchema), [handler.login]);
 
 /**
  * @swagger
- * /api/auth/logout:
+ * /api/logout:
  *   post:
  *     summary: Cierre de sesión
  *     description: Cierra la sesión del usuario actual.
@@ -102,7 +102,7 @@ auth.post("/logout", [handler.logout]);
 
 /**
  * @swagger
- * /api/auth/profile:
+ * /api/profile:
  *   get:
  *     summary: Perfil de usuario
  *     description: Obtiene el perfil del usuario autenticado.
@@ -116,7 +116,7 @@ auth.get("/profile", [validateToken.authRequire], [handler.profile]);
 
 /**
  * @swagger
- * /api/auth/verify:
+ * /api/verify:
  *   get:
  *     summary: Verificación de token
  *     description: Verifica la validez del token de autenticación.
